@@ -12,8 +12,8 @@ import (
 	"github.com/khulnasoft-lab/gobin/event"
 	"github.com/khulnasoft-lab/gobin/internal/bus"
 	"github.com/khulnasoft-lab/gobin/internal/log"
-	"github.com/anchore/bubbly"
-	"github.com/anchore/bubbly/bubbles/frame"
+	"github.com/khulnasoft-lab/gobin/pkg/bubbly"
+	"github.com/khulnasoft-lab/gobin/pkg/bubbly/bubbles/frame"
 	"github.com/khulnasoft-lab/gobin/pkg/clio"
 	"github.com/khulnasoft-lab/gobin/pkg/go-logger"
 )

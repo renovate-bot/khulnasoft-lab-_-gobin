@@ -7,8 +7,8 @@ import (
 	"github.com/wagoodman/go-partybus"
 
 	"github.com/khulnasoft-lab/gobin/event"
-	"github.com/anchore/bubbly"
-	"github.com/anchore/bubbly/bubbles/taskprogress"
+	"github.com/khulnasoft-lab/gobin/pkg/bubbly"
+	"github.com/khulnasoft-lab/gobin/pkg/bubbly/bubbles/taskprogress"
 )
 
 var _ interface {

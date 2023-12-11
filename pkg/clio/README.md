@@ -7,7 +7,7 @@ An easy way to bootstrap your application with batteries included.
 ***Consider this project to be in alpha. The API is not stable and may change at any time.***
 
 ## What is included?
-- Pairs well with [cobra](github.com/spf13/cobra) and [viper](github.com/spf13/viper) via [fangs](github.com/anchore/fangs), covering CLI arg parsing and config file + env var loading.
+- Pairs well with [cobra](github.com/spf13/cobra) and [viper](github.com/spf13/viper) via [fangs](github.com/khulnasoft-lab/gobin/pkg/fangs), covering CLI arg parsing and config file + env var loading.
 - Provides an event bus via [partybus](github.com/wagoodman/go-partybus), enabling visibility deep in your execution stack as to what is happening.
 - Provides a logger via the [logger interface](github.com/khulnasoft-lab/gobin/pkg/go-logger), allowing you to swap out for any concrete logger you'd like.
 - Supplies a redactor object that can be used to remove sensitive output before it's exposed (in the log or elsewhere).
@@ -28,7 +28,7 @@ import (
 	"github.com/spf13/pflag"
 	"github.com/wagoodman/go-partybus"
 	"github.com/khulnasoft-lab/gobin/pkg/clio"
-	"github.com/anchore/fangs"
+	"github.com/khulnasoft-lab/gobin/pkg/fangs"
 )
 
 // Define your per-command or entire application config as a struct

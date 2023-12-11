@@ -14,7 +14,7 @@ import (
 	"github.com/spf13/pflag"
 	"gopkg.in/yaml.v3"
 
-	"github.com/anchore/fangs"
+	"github.com/khulnasoft-lab/gobin/pkg/fangs"
 	"github.com/khulnasoft-lab/gobin/pkg/go-logger"
 	"github.com/khulnasoft-lab/gobin/pkg/go-logger/adapter/redact"
 )

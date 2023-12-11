@@ -1,6 +1,6 @@
 package clio
 
-import "github.com/anchore/fangs"
+import "github.com/khulnasoft-lab/gobin/pkg/fangs"
 
 // FieldDescriber a struct implementing this interface will have DescribeFields called when the config is summarized
 type FieldDescriber interface {

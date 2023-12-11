@@ -3,7 +3,7 @@ package clio
 import (
 	"github.com/wagoodman/go-partybus"
 
-	"github.com/anchore/fangs"
+	"github.com/khulnasoft-lab/gobin/pkg/fangs"
 	"github.com/khulnasoft-lab/gobin/pkg/go-logger"
 	"github.com/khulnasoft-lab/gobin/pkg/go-logger/adapter/discard"
 	"github.com/khulnasoft-lab/gobin/pkg/go-logger/adapter/redact"

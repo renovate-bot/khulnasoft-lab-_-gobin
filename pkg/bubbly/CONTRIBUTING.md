@@ -4,11 +4,11 @@ If you are looking to contribute to this project and want to open a GitHub pull 
 
 ## Fork the repo
 
-You should fork the Bubbly repo using the "Fork" button at the top right of the Bubbly GitHub [site](https://github.com/anchore/bubbly/). You will be doing your development in your fork, then submit a pull request to Bubbly. There are many resources how to use GitHub effectively, we will not cover those here.
+You should fork the Bubbly repo using the "Fork" button at the top right of the Bubbly GitHub [site](https://github.com/khulnasoft-lab/gobin/pkg/bubbly/). You will be doing your development in your fork, then submit a pull request to Bubbly. There are many resources how to use GitHub effectively, we will not cover those here.
 
 ## Adding a feature or fix
 
-If you look at the Bubbly [Issue](https://github.com/anchore/bubbly/issues) there are plenty of bugs and feature requests. Maybe look at the [good first issue](https://github.com/anchore/bubbly/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) list if you're not sure where to start.
+If you look at the Bubbly [Issue](https://github.com/khulnasoft-lab/gobin/pkg/bubbly/issues) there are plenty of bugs and feature requests. Maybe look at the [good first issue](https://github.com/khulnasoft-lab/gobin/pkg/bubbly/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) list if you're not sure where to start.
 
 ## Commit guidelines
 

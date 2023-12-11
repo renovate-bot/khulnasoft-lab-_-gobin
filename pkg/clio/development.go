@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/anchore/fangs"
+	"github.com/khulnasoft-lab/gobin/pkg/fangs"
 )
 
 const (
