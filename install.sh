@@ -3,7 +3,7 @@
 set -u
 
 PROJECT_NAME=gobin
-OWNER=anchore
+OWNER=khulnasoft-lab
 REPO="${PROJECT_NAME}"
 GITHUB_DOWNLOAD_PREFIX=https://github.com/${OWNER}/${REPO}/releases/download
 INSTALL_SH_BASE_URL=https://raw.githubusercontent.com/${OWNER}/${PROJECT_NAME}

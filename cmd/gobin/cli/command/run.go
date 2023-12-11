@@ -16,7 +16,7 @@ import (
 	"golang.org/x/term"
 
 	"github.com/anchore/clio"
-	"github.com/anchore/gobin"
+	"github.com/khulnasoft-lab/gobin"
 	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/option"
 )
 

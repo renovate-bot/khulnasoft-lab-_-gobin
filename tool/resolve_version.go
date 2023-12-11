@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/Masterminds/semver/v3"
-	"github.com/anchore/gobin"
+	"github.com/khulnasoft-lab/gobin"
 
 	"github.com/khulnasoft-lab/gobin/tool/git"
 	"github.com/khulnasoft-lab/gobin/tool/githubrelease"

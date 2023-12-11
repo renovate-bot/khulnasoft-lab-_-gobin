@@ -2,7 +2,7 @@ version: "3"
 vars:
   TOOL_DIR: .tool
 
-  OWNER: anchore
+  OWNER: khulnasoft-lab
   PROJECT: gobin
 
   TMP_DIR: .tmp
@@ -76,7 +76,7 @@ tasks:
     deps: [tools]
     cmds:
       - gofmt -w -s .
-      - "{{ .TOOL_DIR }}/gosimports -local github.com/anchore -w ."
+      - "{{ .TOOL_DIR }}/gosimports -local github.com/GOBIN -w ."
       - go mod tidy
 
   lint-fix:

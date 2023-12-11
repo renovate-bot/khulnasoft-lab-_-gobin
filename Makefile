@@ -1,4 +1,4 @@
-OWNER = anchore
+OWNER = khulnasoft-lab
 PROJECT = gobin
 
 TOOL_DIR = .tool

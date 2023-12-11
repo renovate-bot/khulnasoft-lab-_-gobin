@@ -3,7 +3,7 @@ package tool
 import (
 	"fmt"
 
-	"github.com/anchore/gobin"
+	"github.com/khulnasoft-lab/gobin"
 )
 
 type VerifyConfig struct {
