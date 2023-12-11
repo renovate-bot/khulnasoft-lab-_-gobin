@@ -11,9 +11,9 @@ import (
 	"github.com/wagoodman/go-progress"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/anchore/binny"
 	"github.com/anchore/clio"
-	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/option"
+	"github.com/anchore/gobin"
+	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/option"
 	"github.com/khulnasoft-lab/gobin/event"
 	"github.com/khulnasoft-lab/gobin/internal/bus"
 	"github.com/khulnasoft-lab/gobin/internal/log"
@@ -60,7 +60,7 @@ func runInstall(cmdCfg InstallConfig, names []string) error {
 	}
 
 	// get the current store state
-	store, err := binny.NewStore(cmdCfg.Store.Root)
+	store, err := gobin.NewStore(cmdCfg.Store.Root)
 	if err != nil {
 		return err
 	}
@@ -152,7 +152,7 @@ func trackInstallCmd(toolNames []string) (*progress.Manual, *progress.AtomicStag
 	return prog, stage
 }
 
-func installTool(store *binny.Store, cfg InstallConfig, opt option.Tool) error {
+func installTool(store *gobin.Store, cfg InstallConfig, opt option.Tool) error {
 	t, intent, err := opt.ToTool()
 	if err != nil {
 		return fmt.Errorf("failed to resolve tool config %q: %w", opt.Name, err)

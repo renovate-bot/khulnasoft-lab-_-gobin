@@ -82,13 +82,13 @@ func TestInstaller_InstallTo(t *testing.T) {
 			fields: fields{
 				config: InstallerParameters{
 					Module:     "github.com/khulnasoft-lab/gobin",
-					Entrypoint: "cmd/binny",
+					Entrypoint: "cmd/gobin",
 					LDFlags: []string{
 						"-X github.com/khulnasoft-lab/gobin/internal/version.Version={{.Version}}",
 					},
 				},
 				goInstallRunner: func(spec, ldflags, destDir string) error {
-					assert.Equal(t, "github.com/khulnasoft-lab/gobin/cmd/binny@1.2.3", spec)
+					assert.Equal(t, "github.com/khulnasoft-lab/gobin/cmd/gobin@1.2.3", spec)
 					assert.Equal(t, "-X github.com/khulnasoft-lab/gobin/internal/version.Version=1.2.3", ldflags)
 					assert.Equal(t, "/tmp/to/place", destDir)
 					return nil
@@ -98,7 +98,7 @@ func TestInstaller_InstallTo(t *testing.T) {
 				version: "1.2.3",
 				destDir: "/tmp/to/place",
 			},
-			want:    "/tmp/to/place/binny",
+			want:    "/tmp/to/place/gobin",
 			wantErr: assert.NoError,
 		},
 	}

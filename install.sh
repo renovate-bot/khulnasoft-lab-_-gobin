@@ -2,7 +2,7 @@
 # note: we require errors to propagate (don't set -e)
 set -u
 
-PROJECT_NAME=binny
+PROJECT_NAME=gobin
 OWNER=anchore
 REPO="${PROJECT_NAME}"
 GITHUB_DOWNLOAD_PREFIX=https://github.com/${OWNER}/${REPO}/releases/download

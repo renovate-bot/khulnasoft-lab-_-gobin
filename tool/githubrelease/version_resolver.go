@@ -15,12 +15,12 @@ import (
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
 
-	binny "github.com/khulnasoft-lab/gobin"
+	gobin "github.com/khulnasoft-lab/gobin"
 	"github.com/khulnasoft-lab/gobin/internal"
 	"github.com/khulnasoft-lab/gobin/internal/log"
 )
 
-var _ binny.VersionResolver = (*VersionResolver)(nil)
+var _ gobin.VersionResolver = (*VersionResolver)(nil)
 
 type VersionResolver struct {
 	config               VersionResolutionParameters

@@ -1,5 +1,5 @@
 tools:
-  - name: binny
+  - name: gobin
     version:
       # since the module is . then "current" means whatever is checked out
       want: current
@@ -7,7 +7,7 @@ tools:
     with:
       # aka: github.com/khulnasoft-lab/gobin, without going through github / goproxy (stay local)
       module: .
-      entrypoint: cmd/binny
+      entrypoint: cmd/gobin
       ldflags:
         - -X main.version={{ .Version }}
         - -X main.gitCommit={{ .Version }}

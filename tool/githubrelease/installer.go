@@ -20,7 +20,7 @@ import (
 	"golang.org/x/oauth2"
 
 	"github.com/anchore/go-logger"
-	binny "github.com/khulnasoft-lab/gobin"
+	gobin "github.com/khulnasoft-lab/gobin"
 	"github.com/khulnasoft-lab/gobin/internal"
 	"github.com/khulnasoft-lab/gobin/internal/log"
 )
@@ -83,7 +83,7 @@ var binaryMimeTypes = strset.New(
 	"application/x-executable",
 )
 
-var _ binny.Installer = (*Installer)(nil)
+var _ gobin.Installer = (*Installer)(nil)
 
 type InstallerParameters struct {
 	Repo string `json:"repo" yaml:"repo" mapstructure:"repo"`

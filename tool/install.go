@@ -9,7 +9,7 @@ import (
 	"github.com/wagoodman/go-partybus"
 	"github.com/wagoodman/go-progress"
 
-	binny "github.com/khulnasoft-lab/gobin"
+	gobin "github.com/khulnasoft-lab/gobin"
 	"github.com/khulnasoft-lab/gobin/event"
 	"github.com/khulnasoft-lab/gobin/internal/bus"
 	"github.com/khulnasoft-lab/gobin/internal/log"
@@ -17,7 +17,7 @@ import (
 
 var ErrAlreadyInstalled = errors.New("already installed")
 
-func Install(tool binny.Tool, intent binny.VersionIntent, store *binny.Store, verifyConfig VerifyConfig) (err error) {
+func Install(tool gobin.Tool, intent gobin.VersionIntent, store *gobin.Store, verifyConfig VerifyConfig) (err error) {
 	prog, stage := trackInstallation(tool.Name(), intent.Want)
 	defer func() {
 		if err != nil && !errors.Is(err, ErrAlreadyInstalled) {
@@ -28,7 +28,7 @@ func Install(tool binny.Tool, intent binny.VersionIntent, store *binny.Store, ve
 		}
 	}()
 
-	tmpdir, err := os.MkdirTemp("", fmt.Sprintf("binny-install-%s-", tool.Name()))
+	tmpdir, err := os.MkdirTemp("", fmt.Sprintf("gobin-install-%s-", tool.Name()))
 	if err != nil {
 		return fmt.Errorf("failed to create temp directory: %w", err)
 	}
@@ -52,7 +52,7 @@ func Install(tool binny.Tool, intent binny.VersionIntent, store *binny.Store, ve
 	stage.Set("validating")
 
 	err = Check(store, tool.Name(), resolvedVersion, verifyConfig)
-	if errors.Is(err, binny.ErrMultipleInstallations) {
+	if errors.Is(err, gobin.ErrMultipleInstallations) {
 		return err
 	}
 	if err == nil {

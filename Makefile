@@ -1,31 +1,31 @@
 OWNER = anchore
-PROJECT = binny
+PROJECT = gobin
 
 TOOL_DIR = .tool
-BINNY = $(TOOL_DIR)/binny
+GOBIN = $(TOOL_DIR)/gobin
 TASK = $(TOOL_DIR)/task
 
 .DEFAULT_GOAL := make-default
 
 ## Bootstrapping targets #################################
 
-$(BINNY):
+$(GOBIN):
 	@mkdir -p $(TOOL_DIR)
-	@# we don't have a release of binny yet, so build off of the current branch
+	@# we don't have a release of gobin yet, so build off of the current branch
 	@#curl -sSfL https://raw.githubusercontent.com/$(OWNER)/$(PROJECT)/main/install.sh | sh -s -- -b $(TOOL_DIR)
 	go build -o $(TOOL_DIR)/$(PROJECT) ./cmd/$(PROJECT)
 
 .PHONY: task
-$(TASK) task: $(BINNY)
-	$(BINNY) install task
+$(TASK) task: $(GOBIN)
+	$(GOBIN) install task
 
 .PHONY: ci-bootstrap-go
 ci-bootstrap-go:
 	go mod download
 
 .PHONY: ci-bootstrap-tools
-ci-bootstrap-tools: $(BINNY)
-	$(BINNY) install -vvv
+ci-bootstrap-tools: $(GOBIN)
+	$(GOBIN) install -vvv
 
 # this is a bootstrapping catch-all, where if the target doesn't exist, we'll ensure the tools are installed and then try again
 %:

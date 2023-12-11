@@ -1,4 +1,4 @@
-package binny
+package gobin
 
 import (
 	"crypto/sha256"
@@ -185,7 +185,7 @@ func (s *Store) AddTool(toolName string, resolvedVersion, pathOutsideRoot string
 }
 
 func (s *Store) stateFilePath() string {
-	return filepath.Join(s.root, ".binny.state.json")
+	return filepath.Join(s.root, ".gobin.state.json")
 }
 
 func (s *Store) loadState() error {

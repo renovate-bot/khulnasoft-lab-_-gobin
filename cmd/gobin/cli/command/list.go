@@ -10,8 +10,8 @@ import (
 	"github.com/spf13/cobra"
 
 	"github.com/anchore/clio"
-	binny "github.com/khulnasoft-lab/gobin"
-	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/option"
+	gobin "github.com/khulnasoft-lab/gobin"
+	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/option"
 	"github.com/khulnasoft-lab/gobin/internal/bus"
 	"github.com/khulnasoft-lab/gobin/tool"
 )
@@ -57,7 +57,7 @@ type toolStatus struct {
 
 func runList(cmdCfg ListConfig) error {
 	// get the current store state
-	store, err := binny.NewStore(cmdCfg.Store.Root)
+	store, err := gobin.NewStore(cmdCfg.Store.Root)
 	if err != nil {
 		return err
 	}
@@ -74,7 +74,7 @@ func runList(cmdCfg ListConfig) error {
 	return presentList(allStatuses)
 }
 
-func getAllStatuses(cmdCfg ListConfig, store *binny.Store) []toolStatus {
+func getAllStatuses(cmdCfg ListConfig, store *gobin.Store) []toolStatus {
 	var (
 		failedTools = make(map[string]error)
 		allStatus   []toolStatus
@@ -136,7 +136,7 @@ func getAllStatuses(cmdCfg ListConfig, store *binny.Store) []toolStatus {
 	return allStatus
 }
 
-func getStatus(store *binny.Store, opt option.Tool) (*toolStatus, *binny.StoreEntry, error) {
+func getStatus(store *gobin.Store, opt option.Tool) (*toolStatus, *gobin.StoreEntry, error) {
 	t, intent, err := opt.ToTool()
 	if err != nil {
 		return nil, nil, err
@@ -144,14 +144,14 @@ func getStatus(store *binny.Store, opt option.Tool) (*toolStatus, *binny.StoreEn
 
 	entries := store.GetByName(t.Name())
 	if len(entries) > 1 {
-		return nil, nil, binny.ErrMultipleInstallations
+		return nil, nil, gobin.ErrMultipleInstallations
 	}
 
 	var (
 		isHashValid      bool
 		installedVersion string
 		isInstalled      = len(entries) == 1
-		entry            *binny.StoreEntry
+		entry            *gobin.StoreEntry
 	)
 
 	if isInstalled {
@@ -179,12 +179,12 @@ func getStatus(store *binny.Store, opt option.Tool) (*toolStatus, *binny.StoreEn
 	}, entry, nil
 }
 
-func getInstallationStatus(entry binny.StoreEntry) (installedVersion string, isHashValid bool, err error) {
+func getInstallationStatus(entry gobin.StoreEntry) (installedVersion string, isHashValid bool, err error) {
 	installedVersion = entry.InstalledVersion
 
 	err = entry.Verify(true, false)
 	if err != nil {
-		var errMismatch *binny.ErrDigestMismatch
+		var errMismatch *gobin.ErrDigestMismatch
 		if !errors.As(err, &errMismatch) {
 			// TODO: bail if something more fundamental is wrong? or should we continue and note an error?
 			return "", false, err
@@ -196,7 +196,7 @@ func getInstallationStatus(entry binny.StoreEntry) (installedVersion string, isH
 	return
 }
 
-func removeEntry(entries []binny.StoreEntry, entry *binny.StoreEntry) []binny.StoreEntry {
+func removeEntry(entries []gobin.StoreEntry, entry *gobin.StoreEntry) []gobin.StoreEntry {
 	if entry == nil {
 		return entries
 	}

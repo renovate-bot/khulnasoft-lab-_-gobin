@@ -3,7 +3,7 @@ vars:
   TOOL_DIR: .tool
 
   OWNER: anchore
-  PROJECT: binny
+  PROJECT: gobin
 
   TMP_DIR: .tmp
   SNAPSHOT_DIR: snapshot
@@ -38,24 +38,24 @@ tasks:
 
   ## Bootstrap tasks #################################
 
-  binny:
+  gobin:
     internal: true
-    desc: Get the binny tool
+    desc: Get the gobin tool
     generates:
-      - "{{ .TOOL_DIR }}/binny"
+      - "{{ .TOOL_DIR }}/gobin"
     status:
-      - "test -f {{ .TOOL_DIR }}/binny"
-    # we just need a release of binny, doesn't matter which one (binny will update itself, this is just a bootstrap step)
-    # note: on the first release of binny, switch to the curl approach
+      - "test -f {{ .TOOL_DIR }}/gobin"
+    # we just need a release of gobin, doesn't matter which one (gobin will update itself, this is just a bootstrap step)
+    # note: on the first release of gobin, switch to the curl approach
     # cmd: "curl -sSfL https://raw.githubusercontent.com/{{ .OWNER }}/{{ .PROJECT }}/main/install.sh | sh -s -- -b {{ .TOOL_DIR }}"
-    cmd: "go build -o {{ .TOOL_DIR }}/binny ./cmd/binny"
+    cmd: "go build -o {{ .TOOL_DIR }}/gobin ./cmd/gobin"
     silent: true
 
   tools:
     desc: Install all tools needed for CI and local development
-    deps: [binny]
+    deps: [gobin]
     generates:
-      - "{{ .TOOL_DIR }}/binny"
+      - "{{ .TOOL_DIR }}/gobin"
       - "{{ .TOOL_DIR }}/goreleaser"
       - "{{ .TOOL_DIR }}/chronicle"
       - "{{ .TOOL_DIR }}/glow"
@@ -64,8 +64,8 @@ tasks:
       - "{{ .TOOL_DIR }}/bouncer"
       - "{{ .TOOL_DIR }}/task"
     status:
-      - "{{ .TOOL_DIR }}/binny check -v"
-    cmd: "{{ .TOOL_DIR }}/binny install -v"
+      - "{{ .TOOL_DIR }}/gobin check -v"
+    cmd: "{{ .TOOL_DIR }}/gobin install -v"
     silent: true
 
 

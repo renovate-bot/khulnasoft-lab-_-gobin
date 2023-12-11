@@ -6,7 +6,7 @@ import (
 
 	"github.com/mitchellh/mapstructure"
 
-	binny "github.com/khulnasoft-lab/gobin"
+	gobin "github.com/khulnasoft-lab/gobin"
 	"github.com/khulnasoft-lab/gobin/tool"
 	"github.com/khulnasoft-lab/gobin/tool/githubrelease"
 	"github.com/khulnasoft-lab/gobin/tool/goinstall"
@@ -30,7 +30,7 @@ type ToolVersionConfig struct {
 	Parameters map[string]any `json:"with" yaml:"with,omitempty" mapstructure:"with"`
 }
 
-func (t Tool) ToTool() (binny.Tool, *binny.VersionIntent, error) {
+func (t Tool) ToTool() (gobin.Tool, *gobin.VersionIntent, error) {
 	cfg, intent, err := t.ToConfig()
 	if err != nil {
 		return nil, nil, fmt.Errorf("failed to read tool %q config: %w", t.Name, err)
@@ -43,7 +43,7 @@ func (t Tool) ToTool() (binny.Tool, *binny.VersionIntent, error) {
 	return toolObj, intent, nil
 }
 
-func (t Tool) ToConfig() (*tool.Config, *binny.VersionIntent, error) {
+func (t Tool) ToConfig() (*tool.Config, *gobin.VersionIntent, error) {
 	installParams, err := deriveInstallParameters(t.InstallMethod, t.Parameters)
 	if err != nil {
 		return nil, nil, fmt.Errorf("failed to derive install parameters for tool %q: %w", t.Name, err)
@@ -66,7 +66,7 @@ func (t Tool) ToConfig() (*tool.Config, *binny.VersionIntent, error) {
 		},
 	}
 
-	intent := &binny.VersionIntent{
+	intent := &gobin.VersionIntent{
 		Want:       t.Version.Want,
 		Constraint: t.Version.Constraint,
 	}

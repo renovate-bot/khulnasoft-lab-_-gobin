@@ -14,8 +14,8 @@ import (
 
 	"github.com/anchore/clio"
 	"github.com/anchore/go-logger"
-	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/internal/yamlpatch"
-	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/option"
+	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/internal/yamlpatch"
+	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/option"
 	"github.com/khulnasoft-lab/gobin/event"
 	"github.com/khulnasoft-lab/gobin/internal/bus"
 	"github.com/khulnasoft-lab/gobin/internal/log"

@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/cobra"
 
 	"github.com/anchore/clio"
-	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/option"
+	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/option"
 	"github.com/khulnasoft-lab/gobin/internal/log"
 	"github.com/khulnasoft-lab/gobin/tool/goinstall"
 )

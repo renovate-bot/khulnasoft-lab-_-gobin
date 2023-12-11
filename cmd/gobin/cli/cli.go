@@ -5,9 +5,9 @@ import (
 
 	"github.com/anchore/clio"
 	"github.com/anchore/go-logger"
-	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/command"
-	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/internal/ui"
-	handler "github.com/khulnasoft-lab/gobin/cmd/binny/cli/ui"
+	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/command"
+	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/internal/ui"
+	handler "github.com/khulnasoft-lab/gobin/cmd/gobin/cli/ui"
 	"github.com/khulnasoft-lab/gobin/internal/bus"
 	"github.com/khulnasoft-lab/gobin/internal/log"
 	"github.com/khulnasoft-lab/gobin/internal/redact"

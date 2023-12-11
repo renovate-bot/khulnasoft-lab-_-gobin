@@ -1,4 +1,4 @@
-package binny
+package gobin
 
 import (
 	"os"
@@ -225,7 +225,7 @@ func TestStore_AddTool(t *testing.T) {
 	}
 
 	assertStoreHasString := func(content string) {
-		storeStatePath := filepath.Join(store.root, ".binny.state.json")
+		storeStatePath := filepath.Join(store.root, ".gobin.state.json")
 		contents, err := os.ReadFile(storeStatePath)
 		require.NoError(t, err)
 		assert.Contains(t, string(contents), content)

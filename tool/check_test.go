@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	binny "github.com/khulnasoft-lab/gobin"
+	gobin "github.com/khulnasoft-lab/gobin"
 )
 
 func Test_check_sha256(t *testing.T) {
@@ -54,7 +54,7 @@ func Test_check_sha256(t *testing.T) {
 			if tt.wantErr == nil {
 				tt.wantErr = require.NoError
 			}
-			store, err := binny.NewStore(tt.storeRoot)
+			store, err := gobin.NewStore(tt.storeRoot)
 			require.NoError(t, err)
 
 			tt.wantErr(t, Check(store, tt.toolName, tt.resolvedVersion, VerifyConfig{

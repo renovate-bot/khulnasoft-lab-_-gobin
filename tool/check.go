@@ -3,7 +3,7 @@ package tool
 import (
 	"fmt"
 
-	"github.com/anchore/binny"
+	"github.com/anchore/gobin"
 )
 
 type VerifyConfig struct {
@@ -11,7 +11,7 @@ type VerifyConfig struct {
 	VerifySHA256Digest bool
 }
 
-func Check(store *binny.Store, toolName string, resolvedVersion string, verifyConfig VerifyConfig) error {
+func Check(store *gobin.Store, toolName string, resolvedVersion string, verifyConfig VerifyConfig) error {
 	entry, err := store.Get(toolName, resolvedVersion)
 	if err != nil {
 		return err

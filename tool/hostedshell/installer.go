@@ -12,12 +12,12 @@ import (
 	"github.com/Masterminds/sprig/v3"
 	"github.com/google/shlex"
 
-	binny "github.com/khulnasoft-lab/gobin"
+	gobin "github.com/khulnasoft-lab/gobin"
 	"github.com/khulnasoft-lab/gobin/internal"
 	"github.com/khulnasoft-lab/gobin/internal/log"
 )
 
-var _ binny.Installer = (*Installer)(nil)
+var _ gobin.Installer = (*Installer)(nil)
 
 type InstallerParameters struct {
 	URL  string `json:"url" yaml:"url" mapstructure:"url"`

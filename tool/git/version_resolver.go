@@ -7,11 +7,11 @@ import (
 	"github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/plumbing"
 
-	binny "github.com/khulnasoft-lab/gobin"
+	gobin "github.com/khulnasoft-lab/gobin"
 	"github.com/khulnasoft-lab/gobin/internal/log"
 )
 
-var _ binny.VersionResolver = (*VersionResolver)(nil)
+var _ gobin.VersionResolver = (*VersionResolver)(nil)
 
 type VersionResolver struct {
 	config VersionResolutionParameters

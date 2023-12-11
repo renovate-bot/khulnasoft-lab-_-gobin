@@ -8,8 +8,8 @@ import (
 	"github.com/mitchellh/mapstructure"
 	"gopkg.in/yaml.v3"
 
-	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/internal/yamlpatch"
-	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/option"
+	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/internal/yamlpatch"
+	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/option"
 	"github.com/khulnasoft-lab/gobin/internal/bus"
 	"github.com/khulnasoft-lab/gobin/internal/log"
 )
@@ -66,7 +66,7 @@ func (p yamlToolAppender) PatchYaml(node *yaml.Node) error {
 
 func updateConfiguration(path string, cfg option.Tool) error {
 	if path == "" {
-		path = ".binny.yaml"
+		path = ".gobin.yaml"
 	}
 
 	// if does not exist, create a new file
