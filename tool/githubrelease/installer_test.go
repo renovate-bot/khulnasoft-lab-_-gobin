@@ -665,7 +665,7 @@ func Test_checksumURLVariants(t *testing.T) {
 	}{
 		{
 			name: "happy path",
-			user: "khulnasoft-lab",
+			user: "anchore",
 			repo: "syft",
 			tag:  "v1.0.0",
 			want: []string{
@@ -678,7 +678,7 @@ func Test_checksumURLVariants(t *testing.T) {
 		},
 		{
 			name: "no v prefix on tag",
-			user: "khulnasoft-lab",
+			user: "anchore",
 			repo: "syft",
 			tag:  "1.0.0",
 			want: []string{
@@ -707,7 +707,7 @@ func Test_handleChecksumsReader(t *testing.T) {
 	}{
 		{
 			name: "empty",
-			user: "khulnasoft-lab",
+			user: "anchore",
 			repo: "syft",
 			tag:  "v0.93.0",
 			url:  "https://github.com/anchore/syft/releases/download/1.0.0/checksums.txt",
@@ -719,7 +719,7 @@ func Test_handleChecksumsReader(t *testing.T) {
 		},
 		{
 			name: "happy path",
-			user: "khulnasoft-lab",
+			user: "anchore",
 			repo: "syft",
 			tag:  "v0.93.0",
 			url:  "https://github.com/anchore/syft/releases/download/1.0.0/checksums.txt",
