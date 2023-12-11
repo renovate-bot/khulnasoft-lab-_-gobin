@@ -12,13 +12,13 @@ import (
 	"golang.org/x/sync/errgroup"
 	"gopkg.in/yaml.v3"
 
-	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/internal/yamlpatch"
-	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/option"
+	"github.com/anchore/clio"
+	"github.com/anchore/go-logger"
+	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/internal/yamlpatch"
+	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/option"
 	"github.com/khulnasoft-lab/gobin/event"
 	"github.com/khulnasoft-lab/gobin/internal/bus"
 	"github.com/khulnasoft-lab/gobin/internal/log"
-	"github.com/khulnasoft-lab/gobin/pkg/clio"
-	"github.com/khulnasoft-lab/gobin/pkg/go-logger"
 )
 
 type UpdateConfig struct {

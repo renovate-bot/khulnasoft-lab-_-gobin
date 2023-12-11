@@ -4,9 +4,9 @@ import (
 	"github.com/wagoodman/go-partybus"
 	"github.com/wagoodman/go-progress"
 
+	"github.com/anchore/clio"
 	"github.com/khulnasoft-lab/gobin/event"
 	"github.com/khulnasoft-lab/gobin/internal/redact"
-	"github.com/khulnasoft-lab/gobin/pkg/clio"
 )
 
 func Exit() {

@@ -1,6 +1,6 @@
 package redact
 
-import "github.com/khulnasoft-lab/gobin/pkg/go-logger/adapter/redact"
+import "github.com/anchore/go-logger/adapter/redact"
 
 var store redact.Store
 

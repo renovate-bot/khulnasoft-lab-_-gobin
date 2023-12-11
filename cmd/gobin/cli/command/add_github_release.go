@@ -7,11 +7,11 @@ import (
 	"github.com/scylladb/go-set/strset"
 	"github.com/spf13/cobra"
 
-	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/option"
+	"github.com/anchore/clio"
+	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/option"
 	"github.com/khulnasoft-lab/gobin/internal/bus"
 	"github.com/khulnasoft-lab/gobin/internal/log"
 	"github.com/khulnasoft-lab/gobin/tool/githubrelease"
-	"github.com/khulnasoft-lab/gobin/pkg/clio"
 )
 
 type AddGithubReleaseConfig struct {

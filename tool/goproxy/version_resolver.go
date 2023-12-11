@@ -6,14 +6,14 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/khulnasoft-lab/gobin"
+	binny "github.com/khulnasoft-lab/gobin"
 	"github.com/khulnasoft-lab/gobin/internal"
 	"github.com/khulnasoft-lab/gobin/internal/log"
 )
 
 const latest = "latest"
 
-var _ gobin.VersionResolver = (*VersionResolver)(nil)
+var _ binny.VersionResolver = (*VersionResolver)(nil)
 
 type VersionResolver struct {
 	config                   VersionResolutionParameters

@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/khulnasoft-lab/gobin/pkg/go-logger/adapter/discard"
+	"github.com/anchore/go-logger/adapter/discard"
 )
 
 func Test_DownloadFile(t *testing.T) {

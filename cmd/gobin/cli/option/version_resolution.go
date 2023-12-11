@@ -3,8 +3,8 @@ package option
 import (
 	"fmt"
 
+	"github.com/anchore/clio"
 	"github.com/khulnasoft-lab/gobin/tool"
-	"github.com/khulnasoft-lab/gobin/pkg/clio"
 )
 
 type VersionResolution struct {

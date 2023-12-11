@@ -1,4 +1,4 @@
-package gobin
+package binny
 
 type Tool interface {
 	Name() string

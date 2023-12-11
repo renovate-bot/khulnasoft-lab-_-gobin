@@ -9,8 +9,8 @@ import (
 	"github.com/wagoodman/go-partybus"
 	"github.com/wagoodman/go-progress"
 
+	"github.com/anchore/bubbly/bubbles/taskprogress"
 	"github.com/khulnasoft-lab/gobin/event"
-	"github.com/khulnasoft-lab/gobin/pkg/bubbly/bubbles/taskprogress"
 )
 
 func TestHandler_taskStarted(t *testing.T) {

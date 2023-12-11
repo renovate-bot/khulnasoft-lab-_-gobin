@@ -1,7 +1,7 @@
 package option
 
 import (
-	"github.com/khulnasoft-lab/gobin/pkg/clio"
+	"github.com/anchore/clio"
 )
 
 type Check struct {

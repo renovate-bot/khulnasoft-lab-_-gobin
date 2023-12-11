@@ -5,7 +5,7 @@ import (
 
 	"github.com/mitchellh/hashstructure/v2"
 
-	"github.com/khulnasoft-lab/gobin"
+	binny "github.com/khulnasoft-lab/gobin"
 	"github.com/khulnasoft-lab/gobin/tool/git"
 	"github.com/khulnasoft-lab/gobin/tool/githubrelease"
 	"github.com/khulnasoft-lab/gobin/tool/goinstall"
@@ -13,12 +13,12 @@ import (
 	"github.com/khulnasoft-lab/gobin/tool/hostedshell"
 )
 
-var _ gobin.Tool = (*compositeTool)(nil)
+var _ binny.Tool = (*compositeTool)(nil)
 
 type compositeTool struct {
 	config Config
-	gobin.Installer
-	gobin.VersionResolver
+	binny.Installer
+	binny.VersionResolver
 }
 
 type Config struct {
@@ -45,7 +45,7 @@ func (t *Config) normalize() error {
 	return nil
 }
 
-func New(t Config) (gobin.Tool, error) {
+func New(t Config) (binny.Tool, error) {
 	if err := t.normalize(); err != nil {
 		return nil, fmt.Errorf("failed to normalize tool config: %w", err)
 	}
@@ -67,7 +67,7 @@ func New(t Config) (gobin.Tool, error) {
 	}, nil
 }
 
-func getInstaller(method string, installParams any) (installer gobin.Installer, err error) {
+func getInstaller(method string, installParams any) (installer binny.Installer, err error) {
 	switch {
 	case goinstall.IsInstallMethod(method):
 		params, ok := installParams.(goinstall.InstallerParameters)
@@ -99,7 +99,7 @@ func getInstaller(method string, installParams any) (installer gobin.Installer, 
 	return installer, nil
 }
 
-func getResolver(method string, params any) (resolver gobin.VersionResolver, err error) {
+func getResolver(method string, params any) (resolver binny.VersionResolver, err error) {
 	switch {
 	case goproxy.IsResolveMethod(method):
 		config, ok := params.(goproxy.VersionResolutionParameters)

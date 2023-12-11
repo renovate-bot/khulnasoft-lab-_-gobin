@@ -1,6 +1,6 @@
 package option
 
-import "github.com/khulnasoft-lab/gobin/pkg/clio"
+import "github.com/anchore/clio"
 
 type GoInstall struct {
 	Module     string `json:"module" yaml:"module" mapstructure:"module"`

@@ -5,10 +5,10 @@ import (
 )
 
 const (
-	typePrefix    = "gobin"
+	typePrefix    = "binny"
 	cliTypePrefix = typePrefix + "-cli"
 
-	// Events from the gobin library
+	// Events from the binny library
 
 	// ToolInstallationStartedEvent is a partybus event that occurs when a single tool installation has begun
 	ToolInstallationStartedEvent partybus.EventType = typePrefix + "-tool-installation-started"

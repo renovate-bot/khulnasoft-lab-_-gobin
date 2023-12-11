@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/Masterminds/semver/v3"
+	"github.com/anchore/binny"
 
-	"github.com/khulnasoft-lab/gobin"
 	"github.com/khulnasoft-lab/gobin/tool/git"
 	"github.com/khulnasoft-lab/gobin/tool/githubrelease"
 	"github.com/khulnasoft-lab/gobin/tool/goproxy"
@@ -19,7 +19,7 @@ func VersionResolverMethods() []string {
 	}
 }
 
-func ResolveVersion(tool gobin.VersionResolver, intent gobin.VersionIntent) (string, error) {
+func ResolveVersion(tool binny.VersionResolver, intent binny.VersionIntent) (string, error) {
 	want := intent.Want
 	constraint := intent.Constraint
 

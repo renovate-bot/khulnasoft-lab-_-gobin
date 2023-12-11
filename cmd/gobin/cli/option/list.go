@@ -1,6 +1,6 @@
 package option
 
-import "github.com/khulnasoft-lab/gobin/pkg/clio"
+import "github.com/anchore/clio"
 
 type List struct {
 	Updates bool `json:"updates" yaml:"updates" mapstructure:"updates"`

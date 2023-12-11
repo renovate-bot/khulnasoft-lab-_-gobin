@@ -5,8 +5,8 @@ import (
 
 	"github.com/wagoodman/go-partybus"
 
+	"github.com/anchore/clio"
 	"github.com/khulnasoft-lab/gobin/event"
-	"github.com/khulnasoft-lab/gobin/pkg/clio"
 )
 
 var _ clio.UI = (*NoUI)(nil)

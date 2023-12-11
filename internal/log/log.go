@@ -1,10 +1,10 @@
 package log
 
 import (
+	"github.com/anchore/go-logger"
+	"github.com/anchore/go-logger/adapter/discard"
+	redactLogger "github.com/anchore/go-logger/adapter/redact"
 	"github.com/khulnasoft-lab/gobin/internal/redact"
-	"github.com/khulnasoft-lab/gobin/pkg/go-logger"
-	"github.com/khulnasoft-lab/gobin/pkg/go-logger/adapter/discard"
-	redactLogger "github.com/khulnasoft-lab/gobin/pkg/go-logger/adapter/redact"
 )
 
 // log is the singleton used to facilitate logging internally within

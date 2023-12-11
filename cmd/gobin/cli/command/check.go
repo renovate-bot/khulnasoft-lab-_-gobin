@@ -7,13 +7,13 @@ import (
 	"github.com/hashicorp/go-multierror"
 	"github.com/spf13/cobra"
 
-	"github.com/khulnasoft-lab/gobin"
-	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/option"
+	"github.com/anchore/binny"
+	"github.com/anchore/clio"
+	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/option"
 	"github.com/khulnasoft-lab/gobin/event"
 	"github.com/khulnasoft-lab/gobin/internal/bus"
 	"github.com/khulnasoft-lab/gobin/internal/log"
 	"github.com/khulnasoft-lab/gobin/tool"
-	"github.com/khulnasoft-lab/gobin/pkg/clio"
 )
 
 type CheckConfig struct {
@@ -53,7 +53,7 @@ func runCheck(cmdCfg CheckConfig, names []string) (errs error) {
 	}
 
 	// get the current store state
-	store, err := gobin.NewStore(cmdCfg.Store.Root)
+	store, err := binny.NewStore(cmdCfg.Store.Root)
 	if err != nil {
 		return err
 	}
@@ -104,7 +104,7 @@ func runCheck(cmdCfg CheckConfig, names []string) (errs error) {
 	return nil
 }
 
-func checkTool(store *gobin.Store, opt option.Tool, verifySha256Digest bool) (string, error) {
+func checkTool(store *binny.Store, opt option.Tool, verifySha256Digest bool) (string, error) {
 	t, intent, err := opt.ToTool()
 	if err != nil {
 		return "", err

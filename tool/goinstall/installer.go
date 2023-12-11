@@ -11,11 +11,11 @@ import (
 
 	"github.com/Masterminds/sprig/v3"
 
-	"github.com/khulnasoft-lab/gobin"
+	binny "github.com/khulnasoft-lab/gobin"
 	"github.com/khulnasoft-lab/gobin/internal/log"
 )
 
-var _ gobin.Installer = (*Installer)(nil)
+var _ binny.Installer = (*Installer)(nil)
 
 type InstallerParameters struct {
 	Module     string   `json:"module" yaml:"module" mapstructure:"module"`

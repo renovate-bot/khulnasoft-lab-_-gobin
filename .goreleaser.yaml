@@ -7,8 +7,8 @@ env:
 
 builds:
   - id: linux-build
-    dir: ./cmd/gobin
-    binary: gobin
+    dir: ./cmd/binny
+    binary: binny
     goos:
       - linux
     goarch:
@@ -26,8 +26,8 @@ builds:
       -X main.gitDescription={{.Summary}}
 
   - id: darwin-build
-    dir: ./cmd/gobin
-    binary: gobin
+    dir: ./cmd/binny
+    binary: binny
     goos:
       - darwin
     goarch:
@@ -43,8 +43,8 @@ builds:
 
 # not supported yet
 #  - id: windows-build
-#    dir: ./cmd/gobin
-#    binary: gobin
+#    dir: ./cmd/binny
+#    binary: binny
 #    goos:
 #      - windows
 #    goarch:

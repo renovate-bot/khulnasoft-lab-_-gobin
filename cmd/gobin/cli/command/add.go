@@ -3,7 +3,7 @@ package command
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/khulnasoft-lab/gobin/pkg/clio"
+	"github.com/anchore/clio"
 )
 
 func Add(app clio.Application) *cobra.Command {

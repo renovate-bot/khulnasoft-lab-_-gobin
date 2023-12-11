@@ -1,31 +1,31 @@
-OWNER = khulnasoft-lab
-PROJECT = gobin
+OWNER = anchore
+PROJECT = binny
 
 TOOL_DIR = .tool
-GOBIN = $(TOOL_DIR)/gobin
+BINNY = $(TOOL_DIR)/binny
 TASK = $(TOOL_DIR)/task
 
 .DEFAULT_GOAL := make-default
 
 ## Bootstrapping targets #################################
 
-$(GOBIN):
+$(BINNY):
 	@mkdir -p $(TOOL_DIR)
-	@# we don't have a release of gobin yet, so build off of the current branch
+	@# we don't have a release of binny yet, so build off of the current branch
 	@#curl -sSfL https://raw.githubusercontent.com/$(OWNER)/$(PROJECT)/main/install.sh | sh -s -- -b $(TOOL_DIR)
 	go build -o $(TOOL_DIR)/$(PROJECT) ./cmd/$(PROJECT)
 
 .PHONY: task
-$(TASK) task: $(GOBIN)
-	$(GOBIN) install task
+$(TASK) task: $(BINNY)
+	$(BINNY) install task
 
 .PHONY: ci-bootstrap-go
 ci-bootstrap-go:
 	go mod download
 
 .PHONY: ci-bootstrap-tools
-ci-bootstrap-tools: $(GOBIN)
-	$(GOBIN) install -vvv
+ci-bootstrap-tools: $(BINNY)
+	$(BINNY) install -vvv
 
 # this is a bootstrapping catch-all, where if the target doesn't exist, we'll ensure the tools are installed and then try again
 %:

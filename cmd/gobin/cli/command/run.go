@@ -15,9 +15,9 @@ import (
 	"github.com/spf13/cobra"
 	"golang.org/x/term"
 
-	"github.com/khulnasoft-lab/gobin"
-	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/option"
-	"github.com/khulnasoft-lab/gobin/pkg/clio"
+	"github.com/anchore/binny"
+	"github.com/anchore/clio"
+	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/option"
 )
 
 type RunConfig struct {
@@ -72,7 +72,7 @@ func Run(app clio.Application) *cobra.Command {
 }
 
 func runRunRUN(cfg RunConfig, name string, args []string) error {
-	store, err := gobin.NewStore(cfg.Root)
+	store, err := binny.NewStore(cfg.Root)
 	if err != nil {
 		return err
 	}

@@ -9,13 +9,13 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/wagoodman/go-partybus"
 
+	"github.com/anchore/bubbly"
+	"github.com/anchore/bubbly/bubbles/frame"
+	"github.com/anchore/clio"
+	"github.com/anchore/go-logger"
 	"github.com/khulnasoft-lab/gobin/event"
 	"github.com/khulnasoft-lab/gobin/internal/bus"
 	"github.com/khulnasoft-lab/gobin/internal/log"
-	"github.com/khulnasoft-lab/gobin/pkg/bubbly"
-	"github.com/khulnasoft-lab/gobin/pkg/bubbly/bubbles/frame"
-	"github.com/khulnasoft-lab/gobin/pkg/clio"
-	"github.com/khulnasoft-lab/gobin/pkg/go-logger"
 )
 
 var _ interface {

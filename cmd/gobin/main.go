@@ -1,13 +1,13 @@
 package main
 
 import (
-	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli"
-	"github.com/khulnasoft-lab/gobin/pkg/clio"
+	"github.com/anchore/clio"
+	"github.com/khulnasoft-lab/gobin/cmd/binny/cli"
 )
 
 // applicationName is the non-capitalized name of the application (do not change this)
 const (
-	applicationName = "gobin"
+	applicationName = "binny"
 	notProvided     = "[not provided]"
 )
 

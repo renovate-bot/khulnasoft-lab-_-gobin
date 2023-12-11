@@ -13,7 +13,7 @@ import (
 
 	"github.com/go-git/go-git/v5/plumbing/hash"
 
-	"github.com/khulnasoft-lab/gobin/pkg/go-logger"
+	"github.com/anchore/go-logger"
 )
 
 func DownloadFile(lgr logger.Logger, url string, filepath string, checksum string) (err error) {

@@ -1,9 +1,9 @@
-# gobin
+# binny
 
 Manage a directory of binaries without a package manager.
 
 
-![gobin-demo](https://github.com/khulnasoft-lab/gobin/assets/590471/cdfda64f-0ead-4604-8565-34a397a031b2)
+![binny-demo](https://github.com/khulnasoft-lab/gobin/assets/590471/cdfda64f-0ead-4604-8565-34a397a031b2)
 
 
 ## Installation
@@ -23,7 +23,7 @@ curl -sSfL https://raw.githubusercontent.com/khulnasoft-lab/gobin/main/install.s
 Keep a configuration in your repo with the binaries you want to manage. For example:
 
 ```yaml
-# .gobin.yaml
+# .binny.yaml
 tools:
     - name: gh
       version:
@@ -50,14 +50,14 @@ tools:
 ```
 
 Then you can run:
-  - `gobin install [name...]` to install all tools in the configuration (or the given tool names)
-  - `gobin check` to verify all configured tools are installed, return exit code 1 if any are missing or inconsistent
-  - `gobin update [name...]` to update any pinned versions in the configuration with the latest available versions (and within any given constraints)
-  - `gobin list` to list all tools in the configuration and the installed store
+  - `binny install [name...]` to install all tools in the configuration (or the given tool names)
+  - `binny check` to verify all configured tools are installed, return exit code 1 if any are missing or inconsistent
+  - `binny update [name...]` to update any pinned versions in the configuration with the latest available versions (and within any given constraints)
+  - `binny list` to list all tools in the configuration and the installed store
 
 You can add tools to the configuration one of two ways:
     - manually, by adding a new entry to the configuration file (see the [Configuration](#configuration) section below)
-    - with the `gobin add <method>` commands, which will handle the configuration for you
+    - with the `binny add <method>` commands, which will handle the configuration for you
 
 
 ## Configuration
@@ -173,7 +173,7 @@ The `version.want` option allows a special entry:
 **note**: this method is still under development. Currently it is most useful for tools that are being used where that are developed:
 
 ```yaml
-  - name: gobin
+  - name: binny
     version:
       # since the module is . then "current" means whatever is checked out
       want: current
@@ -181,7 +181,7 @@ The `version.want` option allows a special entry:
     with:
       # aka: github.com/khulnasoft-lab/gobin, without going through github / goproxy (stay local)
       module: .
-      entrypoint: cmd/gobin
+      entrypoint: cmd/binny
       ldflags:
         - -X main.version={{ .Version }}
         - -X main.gitCommit={{ .Version }}

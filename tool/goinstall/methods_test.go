@@ -50,7 +50,7 @@ func TestDefaultVersionResolverConfig(t *testing.T) {
 			name: "valid",
 			installParams: InstallerParameters{
 				Module:     "github.com/khulnasoft-lab/gobin",
-				Entrypoint: "cmd/gobin",
+				Entrypoint: "cmd/binny",
 				LDFlags:    []string{"-X main.version=1.0.0"},
 			},
 			wantMethod: goproxy.ResolveMethod,

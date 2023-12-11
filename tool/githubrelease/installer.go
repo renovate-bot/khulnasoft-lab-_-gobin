@@ -19,10 +19,10 @@ import (
 	"golang.org/x/net/html"
 	"golang.org/x/oauth2"
 
-	"github.com/khulnasoft-lab/gobin"
+	"github.com/anchore/go-logger"
+	binny "github.com/khulnasoft-lab/gobin"
 	"github.com/khulnasoft-lab/gobin/internal"
 	"github.com/khulnasoft-lab/gobin/internal/log"
-	"github.com/khulnasoft-lab/gobin/pkg/go-logger"
 )
 
 const checksumsFilename = "checksums.txt"
@@ -83,7 +83,7 @@ var binaryMimeTypes = strset.New(
 	"application/x-executable",
 )
 
-var _ gobin.Installer = (*Installer)(nil)
+var _ binny.Installer = (*Installer)(nil)
 
 type InstallerParameters struct {
 	Repo string `json:"repo" yaml:"repo" mapstructure:"repo"`

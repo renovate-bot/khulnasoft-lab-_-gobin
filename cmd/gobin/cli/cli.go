@@ -3,14 +3,14 @@ package cli
 import (
 	"os"
 
-	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/command"
-	"github.com/khulnasoft-lab/gobin/cmd/gobin/cli/internal/ui"
-	handler "github.com/khulnasoft-lab/gobin/cmd/gobin/cli/ui"
+	"github.com/anchore/clio"
+	"github.com/anchore/go-logger"
+	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/command"
+	"github.com/khulnasoft-lab/gobin/cmd/binny/cli/internal/ui"
+	handler "github.com/khulnasoft-lab/gobin/cmd/binny/cli/ui"
 	"github.com/khulnasoft-lab/gobin/internal/bus"
 	"github.com/khulnasoft-lab/gobin/internal/log"
 	"github.com/khulnasoft-lab/gobin/internal/redact"
-	"github.com/khulnasoft-lab/gobin/pkg/clio"
-	"github.com/khulnasoft-lab/gobin/pkg/go-logger"
 )
 
 // New constructs the `syft packages` command, aliases the root command to `syft packages`,
