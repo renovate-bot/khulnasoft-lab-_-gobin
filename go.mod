@@ -7,7 +7,7 @@ require (
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/OneOfOne/xxhash v1.2.8
 	github.com/anchore/bubbly v0.0.0-20230919123500-747f4abea05f
-	github.com/anchore/clio v0.0.0-20230823172630-c42d666061af
+	github.com/anchore/clio v0.0.0-20240105134038-89e2fe85ce25
 	github.com/anchore/go-logger v0.0.0-20230725134548-c21dafa1ec5a
 	github.com/chainguard-dev/yam v0.0.0-20230904174023-8d3c53b7e9d7
 	github.com/charmbracelet/bubbles v0.16.1
