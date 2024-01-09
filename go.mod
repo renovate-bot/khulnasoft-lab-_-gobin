@@ -1,6 +1,6 @@
 module github.com/khulnasoft-lab/gobin
 
-go 1.21.1
+go 1.21.6
 
 require (
 	github.com/Masterminds/semver/v3 v3.2.1
@@ -13,9 +13,9 @@ require (
 	github.com/charmbracelet/bubbles v0.16.1
 	github.com/charmbracelet/bubbletea v0.24.2
 	github.com/charmbracelet/lipgloss v0.8.0
-	github.com/creack/pty v1.1.21
-	github.com/gabriel-vasile/mimetype v1.4.3
-	github.com/gkampitakis/go-snaps v0.4.12
+	github.com/creack/pty v1.1.18
+	github.com/gabriel-vasile/mimetype v1.4.2
+	github.com/gkampitakis/go-snaps v0.4.10
 	github.com/go-git/go-git/v5 v5.11.0
 	github.com/google/go-cmp v0.6.0
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510
@@ -27,7 +27,7 @@ require (
 	github.com/mitchellh/mapstructure v1.5.0
 	github.com/pkg/errors v0.9.1
 	github.com/scylladb/go-set v1.0.3-0.20200225121959-cc7b2070d91e
-	github.com/shurcooL/githubv4 v0.0.0-20230704064427-599ae7bbf278
+	github.com/shurcooL/githubv4 v0.0.0-20231126234147-1cffa1f02456
 	github.com/spf13/cobra v1.8.0
 	github.com/stretchr/testify v1.8.4
 	github.com/wagoodman/go-partybus v0.0.0-20230516145632-8ccac152c651
