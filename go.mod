@@ -7,7 +7,7 @@ require (
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/OneOfOne/xxhash v1.2.8
 	github.com/anchore/bubbly v0.0.0-20230919123500-747f4abea05f
-	github.com/anchore/clio v0.0.0-20240105134038-89e2fe85ce25
+	github.com/anchore/clio v0.0.0-20240118133543-a5e93b68d716
 	github.com/anchore/go-logger v0.0.0-20230725134548-c21dafa1ec5a
 	github.com/chainguard-dev/yam v0.0.0-20231206181338-1088a8ccc8a6
 	github.com/charmbracelet/bubbles v0.16.1
@@ -88,6 +88,7 @@ require (
 	github.com/kr/text v0.2.0 // indirect
 	github.com/lucasb-eyer/go-colorful v1.2.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
+	github.com/maruel/natural v1.1.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.18 // indirect
 	github.com/mattn/go-localereader v0.0.2-0.20220822084749-2491eb6c1c75 // indirect
